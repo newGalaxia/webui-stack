@@ -1,7 +1,8 @@
 # base image
-FROM node:lts-alpine
-# Create app directory
-WORKDIR /usr/src/app
+FROM node:lts-alpine3.9
+# Create app directory"
+
+WORKDIR /var/www/webui-vuejs
 
 # Install app dependencies
 COPY package*.json ./

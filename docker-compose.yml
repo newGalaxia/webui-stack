@@ -1,11 +1,15 @@
 version: "3.6"
 services:
-  app:
+  webui:
+    container_name: webui
     build:
       context: ./
       dockerfile: Dockerfile
-    working_dir: /usr/src/app
+    working_dir: /var/www/webui-vuejs
     volumes:
-      - ./:/usr/src/app:cached
+      - .:/var/www/webui-vuejs
+      - /var/www/webui-vuejs/node_modules
+    environment:
+      - npm_config_unsafe_perm=true
     ports:
       - 8080:8080
