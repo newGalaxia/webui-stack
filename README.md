@@ -1,16 +1,24 @@
 # webui-vuejs
 
-## Install development environment with Docker
+## Install dev environment with Docker
 
 ## Prerequisites
 
-Refer to the official documentation if you need to install docker : https://docs.docker.com/engine/install/
+- docker
+- docker-compose
 
-## Run project with docker log
+If you need to install docker or docker-compose or both, you could refer to the official documentation.
+
+- https://docs.docker.com/engine/install/
+- https://docs.docker.com/compose/install/
+
+## Run project with docker
 
 ```
-docker-compose up
+docker-compose up -d
 ```
+
+# vuejs documentation
 
 ## Project setup
 
