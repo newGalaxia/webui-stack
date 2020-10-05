@@ -1,0 +1,26 @@
+version: "3.6"
+services:
+  webui:
+    container_name: webui
+    build:
+      context: ./
+      dockerfile: webui-vuejs/Dockerfile
+    working_dir: /var/www/webui-vuejs
+    volumes:
+      - ./webui-vuejs:/var/www/webui-vuejs
+      - /var/www/webui-vuejs/node_modules
+    environment:
+      - npm_config_unsafe_perm=true
+    ports:
+      - 8080:8080
+  api:
+    container_name: express-api
+    build:
+      context: ./
+      dockerfile: socket-server/Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./socket-server:/var/www/socket-server
+      - /var/www/socket-server/node_modules
+
