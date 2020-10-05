@@ -1,10 +1,9 @@
 <template>
   <div>
     <p>{{ wlan.name }} REST</p>
-    <p>{{ wlan.status }}</p>
     <Status v-bind:currentStatus="wlan.status"></Status>
-     <p>wlan socket</p>
-    <p>{{ wlanSocket.status }}</p>
+     <p> WLAN SOCKET</p>
+    <Status v-bind:currentStatus="wlanSocket.status"></Status>
   </div>
 </template>
 
