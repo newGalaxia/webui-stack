@@ -8,9 +8,12 @@ const Socketio = require("socket.io")(Http);
 
 
 Socketio.on("connection", (socket) => {
-  setTimeout(()=> socket.emit("wlan", {status : "Diabled"}), 1500);
-  setTimeout(()=> socket.emit("wlan", {status : "Enabled"}), 5000);
-  setTimeout(()=> socket.emit("wlan", {status : "Pending"}), 6000);
+  setTimeout(()=> socket.emit("wlan", {status : "Disabled"}), 3000);
+  setTimeout(()=> socket.emit("wlan", {status : "Enabled"}), 6000);
+  setTimeout(()=> socket.emit("wlan", {status : "Pending"}), 12000);
+  setTimeout(()=> socket.emit("wlan", {status : "Disabled"}), 15000);
+  setTimeout(()=> socket.emit("wlan", {status : "Enabled"}), 18000);
+  setTimeout(()=> socket.emit("wlan", {status : "Pending"}), 21000);
   
 });
 
